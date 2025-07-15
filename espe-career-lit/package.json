@@ -1,0 +1,29 @@
+{
+  "name": "espe-career-lit",
+  "description": "Webcomponent espe-career-lit following open-wc recommendations",
+  "license": "MIT",
+  "author": "espe-career-lit",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./espe-career-lit.js": "./dist/src/espe-career-lit.js"
+  },
+  "scripts": {
+    "analyze": "cem analyze --litelement",
+    "start": "web-dev-server --open --node-resolve --app-index src/index.html",
+    "build": "npm run analyze -- --exclude dist",
+    "prepublish": "npm run analyze -- --exclude dist"
+  },
+  "dependencies": {
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@web/dev-server": "^0.4.6",
+    "concurrently": "^8.2.2"
+  },
+  "customElements": "custom-elements.json"
+}
