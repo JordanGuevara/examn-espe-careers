@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carreras ESPE</title>
+    <script type="module" src="./components/career-selector.js"></script>
+    <script type="module" src="./components/career-card.js"></script>
+  </head>
+  <body>
+    <h1>Selecciona una carrera</h1>
+    <career-selector></career-selector>
+    <career-card></career-card>
+
+    <script>
+      const selector = document.querySelector('career-selector');
+      const card = document.querySelector('career-card');
+
+      selector.addEventListener('career-selected', e => {
+        card.career = e.detail;
+      });
+    </script>
+  </body>
+</html>
